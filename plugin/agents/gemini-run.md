@@ -12,12 +12,23 @@ Le header porte toujours `PLUGIN_ROOT` : la racine absolue du plugin `erom-gemin
 
 ## Résolution du binaire
 
-`$AGY_BIN` si défini, sinon `agy` sur PATH, sinon `${HOME}/.local/bin/agy`. Absent → retourne : « agy introuvable : installer https://antigravity.google, puis lancer `agy` une fois en terminal pour l'OAuth » et stop.
+Ouvre TOUJOURS l'appel Bash principal par ces trois lignes, verbatim — n'improvise aucune variante :
+
+```bash
+AGY="${AGY_BIN:-$(command -v agy || true)}"; [ -n "$AGY" ] || AGY="$HOME/.local/bin/agy"
+[ -x "$AGY" ] || { echo "agy introuvable : installer https://antigravity.google, puis lancer \`agy\` une fois en terminal pour l'OAuth"; exit 1; }
+```
+
+`$AGY` est un chemin absolu ; toute la suite l'appelle via `"$AGY"`, jamais `agy`.
+
+> Piège : `[ -x agy ]` sur un nom nu teste `./agy` dans le CWD, pas le PATH — d'où un faux « agy introuvable » sur une machine où le binaire est parfaitement installé. `command -v` renvoie le chemin absolu, c'est lui qu'on teste.
+
+Si le test échoue, retourne le message d'erreur tel quel et stop.
 
 ## Contrat d'invocation (non négociable)
 
 ```
-agy --dangerously-skip-permissions [--add-dir <dir>]... --model '<MODEL ou gemini-3.6-flash-high>' --print-timeout <N> --print "<PROMPT>" < /dev/null
+"$AGY" --dangerously-skip-permissions [--add-dir <dir>]... --model '<MODEL ou gemini-3.6-flash-high>' --print-timeout <N> --print "<PROMPT>" < /dev/null
 ```
 
 - `--print` est le DERNIER flag avant le prompt (le parseur Go consomme le token suivant).
