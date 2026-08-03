@@ -95,7 +95,13 @@ REGARDE toute la vidéo. Décris ce qui est MONTRÉ, avec timestamps — pas seu
 <TOUT le texte lisible à l'écran — puces de slides, sous-titres, code, UI, figures — groupé par timestamp ; c'est de l'OCR, transcris verbatim, marque "illisible" si illisible>
 ## Moments clés
 - mm:ss — <événement visuel notable : un résultat affiché, une transition, une erreur, une frame clé>
-Sois fidèle à ce qui est réellement visible ; n'invente aucun texte à l'écran ni événement.
+
+RÈGLE DE FIDÉLITÉ (elle prime sur le remplissage des sections) :
+- Un plan FIXE est un résultat valide. Si l'image ne change pas entre deux tranches, écris « plan fixe, identique » et rien d'autre — ne meuble pas la colonne « Ce qu'on voit ».
+- N'invente JAMAIS de mouvement : pas de curseur qui clignote ou se déplace, pas de scroll, pas de transition, pas de clic, pas de frappe au clavier, sauf si tu l'as réellement VU bouger d'une frame à l'autre.
+- Un mouvement que tu déduis de l'audio n'est pas un mouvement vu. Si la voix dit « je clique sur X » mais que l'image ne bouge pas, ça va dans la colonne Audio, pas dans « Ce qu'on voit » ni dans Moments clés.
+- « Moments clés » peut ne contenir QUE des événements audio si rien ne bouge à l'écran, ou être quasi vide. Une section maigre et vraie vaut mieux qu'une section pleine et fausse.
+- L'OCR reste exhaustif dans tous les cas : c'est le texte qui doit être complet, pas la description du mouvement.
 ```
 
 ### MODE: media

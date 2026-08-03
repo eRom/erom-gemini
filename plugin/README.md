@@ -73,6 +73,13 @@ si l'auth headless a expiré — jamais de transcript inventé sur un moteur mor
   détecte (fichier vide) et récupère la réponse depuis le transcript de la
   conversation ; il distingue ce cas d'une auth expirée, qui elle n'est jamais
   retentée.
+- `video`, colonne « Ce qu'on voit » : Gemini peut inventer du mouvement sur un
+  plan fixe — observé une fois, un curseur d'édition décrit comme clignotant et
+  se déplaçant sur une vidéo faite d'une seule image bouclée. Le prompt interdit
+  explicitement l'invention de mouvement depuis la 0.1.2, sans garantie absolue.
+  **L'OCR (`## Texte à l'écran`) est fiable** ; c'est la description des
+  événements visuels qui demande un œil critique sur un screencast, où un
+  faux mouvement de curseur est plausible et indétectable sans revoir la vidéo.
 
 ## Composants
 
