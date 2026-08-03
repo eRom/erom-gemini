@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+
+# Réceptacle caserne local (IDs Linear/Slack internes) - repo destiné à être publié
+_memory_/
