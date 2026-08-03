@@ -5,3 +5,4 @@ node_modules/
 
 # Réceptacle caserne local (IDs Linear/Slack internes) - repo destiné à être publié
 _memory_/
+docs/gemini/
