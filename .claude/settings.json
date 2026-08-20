@@ -8,7 +8,7 @@
     "claude-md-management@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "plugin-dev@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": false,
     "superpowers@claude-plugins-official": true,
     "telegram@claude-plugins-official": true,
     "yaml-language-server@claude-code-lsps": true,
