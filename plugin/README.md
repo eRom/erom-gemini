@@ -1,4 +1,4 @@
-# erom-gemini — les yeux et les oreilles de Claude Code
+# erom-gemini - les yeux et les oreilles de Claude Code
 
 Plugin Claude Code. Claude Code ne voit ni n'entend les médias : il ne peut ni
 écouter une note vocale, ni regarder un screencast, ni océriser un PDF scanné.
@@ -38,7 +38,7 @@ Exemples :
 
 | Alias | Modèle |
 |---|---|
-| `gemini-3.7-flash-high` | Gemini 3.7 Flash (High) — défaut |
+| `gemini-3.7-flash-high` | Gemini 3.7 Flash (High) - défaut |
 | `gemini-3.1-pro-high` | Gemini 3.1 Pro (High) |
 
 Une valeur absente de la table est passée telle quelle à `agy`, supposée être un
@@ -63,7 +63,7 @@ docs/gemini/converted/<date>-<slug>.md
 
 `$AGY_BIN` prime si défini, sinon `agy` sur le PATH, sinon `~/.local/bin/agy`.
 Le forwarder fait son préflight et s'arrête proprement si le binaire manque ou
-si l'auth headless a expiré — jamais de transcript inventé sur un moteur mort.
+si l'auth headless a expiré - jamais de transcript inventé sur un moteur mort.
 
 ## Limites connues
 
@@ -74,7 +74,7 @@ si l'auth headless a expiré — jamais de transcript inventé sur un moteur mor
   conversation ; il distingue ce cas d'une auth expirée, qui elle n'est jamais
   retentée.
 - `video`, colonne « Ce qu'on voit » : Gemini peut inventer du mouvement sur un
-  plan fixe — observé une fois, un curseur d'édition décrit comme clignotant et
+  plan fixe - observé une fois, un curseur d'édition décrit comme clignotant et
   se déplaçant sur une vidéo faite d'une seule image bouclée. Le prompt interdit
   explicitement l'invention de mouvement depuis la 0.1.2, sans garantie absolue.
   **L'OCR (`## Texte à l'écran`) est fiable** ; c'est la description des
@@ -97,8 +97,8 @@ skills/
 Le plugin est autonome : aucun script ni agent hors de sa racine, stdlib Python
 uniquement. Les skills résolvent la racine (`${CLAUDE_PLUGIN_ROOT}`, ou deux
 niveaux au-dessus du base directory de la skill) et la passent au forwarder via
-le header `PLUGIN_ROOT` — le forwarder ne devine jamais son propre chemin.
+le header `PLUGIN_ROOT` - le forwarder ne devine jamais son propre chemin.
 
 ## Licence
 
-MIT — Romain Ecarnot.
+MIT - Romain Ecarnot.
