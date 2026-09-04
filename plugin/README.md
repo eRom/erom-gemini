@@ -34,11 +34,11 @@ Exemples :
 /erom-gemini:doc-to-md ~/Documents/contrat.pdf 45 pages
 ```
 
-`--model` est optionnel ; sans lui, `Gemini 3.7 Flash (High)`.
+`--model` est optionnel ; sans lui, `Gemini 3.8 Flash (High)`.
 
 | Alias | Modèle |
 |---|---|
-| `gemini-3.7-flash-high` | Gemini 3.7 Flash (High) - défaut |
+| `gemini-3.8-flash-high` | Gemini 3.8 Flash (High) - défaut |
 | `gemini-3.1-pro-high` | Gemini 3.1 Pro (High) |
 
 Une valeur absente de la table est passée telle quelle à `agy`, supposée être un

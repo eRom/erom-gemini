@@ -28,18 +28,18 @@ Si le test échoue, retourne le message d'erreur tel quel et stop.
 ## Contrat d'invocation (non négociable)
 
 ```
-"$AGY" --dangerously-skip-permissions [--add-dir <dir>]... --model '<MODEL ou gemini-3.7-flash-high>' --print-timeout <N> --print "<PROMPT>" < /dev/null
+"$AGY" --dangerously-skip-permissions [--add-dir <dir>]... --model '<MODEL ou gemini-3.8-flash-high>' --print-timeout <N> --print "<PROMPT>" < /dev/null
 ```
 
 - `--print` est le DERNIER flag avant le prompt (le parseur Go consomme le token suivant).
 - `< /dev/null` après le prompt est OBLIGATOIRE (stdin hérité ouvert = hang non borné par --print-timeout).
 - Timeout de l'outil Bash = timeout agy + 60 s, toujours explicite.
 - Échappe les `"` internes du prompt en `\"`.
-- MODEL : si le header fournit un MODEL non vide, résous-le via la table d'alias ci-dessous (une valeur absente de la table est passée telle quelle, supposée être un label exact) ; sinon `gemini-3.7-flash-high`.
+- MODEL : si le header fournit un MODEL non vide, résous-le via la table d'alias ci-dessous (une valeur absente de la table est passée telle quelle, supposée être un label exact) ; sinon `gemini-3.8-flash-high`.
 
 | Alias | Label |
 |---|---|
-| `gemini-3.7-flash-high` | `Gemini 3.7 Flash (High)` |
+| `gemini-3.8-flash-high` | `Gemini 3.8 Flash (High)` |
 | `gemini-3.1-pro-high` | `Gemini 3.1 Pro (High)` |
 
 ## Après l'appel : vérifier puis récupérer
